@@ -2,14 +2,12 @@ package controllers
 
 import (
 	"net/http"
-
-	"github.com/codecamp-prem/goDev/views"
 )
 
 //Users to hold the method template ofr user
 type Users struct {
 	Templates struct {
-		New views.Template
+		New Template
 	}
 }
 

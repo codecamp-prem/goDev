@@ -3,19 +3,17 @@ package controllers
 import (
 	"html/template"
 	"net/http"
-
-	"github.com/codecamp-prem/goDev/views"
 )
 
 // StaticHandler : handle static template
-func StaticHandler(tpl views.Template) http.HandlerFunc {
+func StaticHandler(tpl Template) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		tpl.Execute(w, nil)
 	}
 }
 
 // FAQ : dynamic faq
-func FAQ(tpl views.Template) http.HandlerFunc {
+func FAQ(tpl Template) http.HandlerFunc {
 	questions := []struct {
 		Question string
 		Answer   template.HTML
